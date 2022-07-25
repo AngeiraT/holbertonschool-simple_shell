@@ -102,6 +102,7 @@ This project is licensed under the Holberton School Software Engineering Program
   - Approaching a Project
   - Group Projects
   - Cohort 18
+  - Everything you need to know to start coding your own shell
 
 ## References
   - [UNIX shell](https://en.wikipedia.org/wiki/Unix_shell)
