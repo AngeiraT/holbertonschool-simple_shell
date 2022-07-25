@@ -1,4 +1,5 @@
 # Simple Shell
+> Write your own `shell`. 
 
 ![Screenshot from 2022-07-24 15-15-50](https://user-images.githubusercontent.com/105127608/180814389-c8c027d8-4f92-4b18-b97b-6e0f66694ad6.png)
 
@@ -8,8 +9,8 @@ The Simple Shell is a simple UNIX command interpreter written in C. The program 
 
 ### Requirements
 - Allowed editors: vi, vim, emacs
-- All your files will be compiled on Ubuntu 14.04 LTS
-- Your C programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic
+- All your files will be compiled on Ubuntu 20.04 LTS
+- Your C programs and functions will be compiled with gcc using the flags -Wall -Werror -Wextra and -pedantic
 - All your files should end with a new line
 - A README.md file, at the root of the folder of the project is mandatory
 - Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
@@ -18,7 +19,7 @@ The Simple Shell is a simple UNIX command interpreter written in C. The program 
 - All your header files should be include guarded
 - Use system calls only when you need to (why?)
 ### Compilation
-All of the ``.c`` files along with a main.c file are to be compiled with ``gcc 4.8.4`` on Ubuntu 14.04 LTS with the flags ``-Wall Werror`` ``-Wextra`` and ``-pedantic.``
+All of the ``.c`` files along with a main.c file are to be compiled with ``gcc`` on Ubuntu 20.04 LTS with the flags ``-Wall Werror`` ``-Wextra`` and ``-pedantic.``
 The files will be compiled this way:
 ```{bash}
  $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh``
@@ -55,14 +56,14 @@ The shell works like this in non-interactive mode:
 ```{bash}
 $ echo "/bin/ls" | ./hsh
 built_in.c      _getenv.c    man_1_simple_shell  shell.c         split_line.c
-error.c         hsh          mini_shell          shell.h         useful_func.c
+error.c         hsh          simple_shell          shell.h         useful_func.c
 execute_line.c  list_path.c  README.md           special_case.c  _which.c
 $
 ```
 ```{bash}
 $ echo "///////bin/////ls" | ./hsh
 built_in.c      _getenv.c    man_1_simple_shell  shell.c         split_line.c
-error.c         hsh          mini_shell          shell.h         useful_func.c
+error.c         hsh          simple_shell          shell.h         useful_func.c
 execute_line.c  list_path.c  README.md           special_case.c  _which.c
 $
 ```
@@ -81,6 +82,29 @@ exit | Exits the shell
 
 ![Image of Flowchart](https://i.imgur.com/WcN0ccr.jpg)
 
-### Contributors
-- [Angeira Quiles](https://github.com/AngeiraT)
-- [Ivanska](https://github.com/)
+## Built With
+
+  - [Ubuntu](https://ubuntu.com/) 
+  - [GitHub](https://github.com/)
+  - [PurpleBooth](https://github.com/PurpleBooth)
+
+## Authors
+
+  - **Ivanska** - [*@Ivanskaa*](https://github.com/Ivanskaa)
+  - **Angeira** -[*@AngeiraT*](https://github.com/AngeiraT)
+
+## License
+
+This project is licensed under the Holberton School Software Engineering Program.
+
+## Acknowledgments
+
+  - Approaching a Project
+  - Group Projects
+  - Cohort 18
+
+## References
+  - [UNIX shell](https://en.wikipedia.org/wiki/Unix_shell)
+  - [Thomsom shell](https://en.wikipedia.org/wiki/Thompson_shell)
+  - [Ken Thomsom](https://en.wikipedia.org/wiki/Ken_Thompson)
+
