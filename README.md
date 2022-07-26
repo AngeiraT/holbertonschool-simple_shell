@@ -1,7 +1,7 @@
 # Simple Shell
 > Write your own `shell`. 
 
-![Screenshot from 2022-07-24 15-15-50](https://user-images.githubusercontent.com/105127608/180814389-c8c027d8-4f92-4b18-b97b-6e0f66694ad6.png)
+![printf_image (1)](https://user-images.githubusercontent.com/105127608/180880520-a05f61b1-f75f-4f94-9730-db0647d8aedc.jpg)
 
 Simple Shell is a project for students at Holberton School. The project test everything we have learned about the C programming language and our skills for work as a team and planning for a long term project.
 ### Description
