@@ -12,6 +12,7 @@ int main(int ac, char **av, char **env)
 	{
 		if (isatty(STDIN_FILENO))
 		write(STDOUT_FILENO, "$ ", 2);
+
 		/*prompt*/
 
 		/*printf("#cisfun$ ");*/
