@@ -8,7 +8,11 @@ char *read_line(void)
         get_l = getline(&line, &bufsize, stdin);
 
 	if (get_l == -1)
-		exit (0);
+	{	
+		free(line);
+		line = NULL;
+		exit(0);
+	}
 
         return (line);
 }
