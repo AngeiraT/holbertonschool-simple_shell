@@ -3,30 +3,31 @@ int main(int ac, char **av, char **env)
 {
 	char *line = NULL;
 	char **arg;
-	/*size_t bufsize = 0;*/
 	(void)ac;
 	(void)av;
-	(void)env;
 
 	while (1)
 	{
+		/*prompt*/
 		if (isatty(STDIN_FILENO))
 		write(STDOUT_FILENO, "$ ", 2);
 
-		/*prompt*/
-
-		/*printf("#cisfun$ ");*/
-
 		/*receives user input and stores it in line*/
-		/*if (getline(&line, &bufsize, stdin) == -1)
-		{
-			write(1, "\n", 1);
-			break;
-		}*/
-	
 		line = read_line();
+		
+		
 
-		if (line[0] == '\0')
+		/*check if command is exit*/
+
+		/*if (_strcmp(line[0], EXITCMD) == 0)
+		{
+			exit(0);
+		}
+		*/
+
+
+		/*check if command is enter*/
+		if (*line == '\n')
 		{
 			free(line);
 			continue;
@@ -34,7 +35,12 @@ int main(int ac, char **av, char **env)
 
 		/* tokenizes line */
 		arg = split_line(line);
+		find_file_path(environ);
+
+		/* executes the validate command*/
 		execute_line(arg);
+
+		/*Frees memory for next command*/
 		free (line);
 		free(arg);
 	}
