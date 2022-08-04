@@ -36,8 +36,6 @@ int main(int ac, char **av, char **env)
 			arg = NULL;
 			exit(0);
 		}
-		free(line);
-		line = NULL;
 /*	
 		find_file_path(env);
 */
