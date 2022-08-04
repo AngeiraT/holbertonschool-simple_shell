@@ -15,16 +15,6 @@ int main(int ac, char **av, char **env)
 
 		/*receives user input and stores it in line*/
 		line = read_line();
-		
-		
-
-		/*check if command is exit*/
-
-		/*if (_strcmp(line[0], EXITCMD) == 0)
-		{
-			exit(0);
-		}
-		*/
 
 
 		/*check if command is enter*/
@@ -36,6 +26,15 @@ int main(int ac, char **av, char **env)
 
 		/* tokenizes line */
 		arg = split_line(line);
+
+		/*check if command is exit*/
+
+		if (strcmp(line, "exit") == 0)
+		{
+			free(line);
+			free(arg);
+			exit(0);
+		}
 /*
 		find_file_path(env);
 */
@@ -44,7 +43,7 @@ int main(int ac, char **av, char **env)
 
 		/*Frees memory for next command*/
 		free(line);
-		free_commands(arg);
+		free(arg);
 	}
 	free(line);
 	return (0);
