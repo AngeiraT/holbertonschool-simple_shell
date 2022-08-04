@@ -5,7 +5,6 @@ int main(int ac, char **av, char **env)
 	char **arg;
 	(void)ac;
 	(void)av;
-	(void)env;
 
 	while (1)
 	{
@@ -39,7 +38,7 @@ int main(int ac, char **av, char **env)
 		find_file_path(env);
 */
 		/* executes the validate command*/
-		execute_line(arg);
+		execute_line(arg, env);
 
 		/*Frees memory for next command*/
 		free(line);

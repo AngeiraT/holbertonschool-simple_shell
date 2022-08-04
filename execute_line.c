@@ -1,5 +1,5 @@
 #include "shell.h"
-void execute_line(char **arg)
+void execute_line(char **arg, char **env)
 {
 	int status;
 	pid_t pid;
@@ -10,7 +10,7 @@ void execute_line(char **arg)
 
 	if (pid == 0)
 	{
-		if (execve(arg[0], arg, NULL) == -1)
+		if (execve(arg[0], arg, env) == -1)
 			perror("Execve failed");
 	}
 	else

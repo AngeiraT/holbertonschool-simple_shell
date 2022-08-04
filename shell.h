@@ -13,11 +13,10 @@
 
 /* Prototypes */
 char **split_line(char *line);
-void execute_line(char **arg);
+void execute_line(char **arg, char **env);
 char *read_line(void);
 char **find_file_path(char **environ);
 extern char **environ;
 void free_commands(char **args);
-/*int main(int ac, char **av, char **env);*/
 
 #endif
