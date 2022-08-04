@@ -1,7 +1,7 @@
 #include "shell.h"
 
 
-char **find_file_path(char **environ)
+char **find_file_path(__attribute__((unused))char **environ)
 {
 	char *full_path;
 	char **pathdir;

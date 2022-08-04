@@ -5,6 +5,7 @@ int main(int ac, char **av, char **env)
 	char **arg;
 	(void)ac;
 	(void)av;
+	(void)env;
 
 	while (1)
 	{
@@ -35,15 +36,16 @@ int main(int ac, char **av, char **env)
 
 		/* tokenizes line */
 		arg = split_line(line);
-		find_file_path(environ);
-
+/*
+		find_file_path(env);
+*/
 		/* executes the validate command*/
 		execute_line(arg);
 
 		/*Frees memory for next command*/
-		free (line);
-		free(arg);
+		free(line);
+		free_commands(arg);
 	}
-
+	free(line);
 	return (0);
 }
