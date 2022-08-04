@@ -1,12 +1,17 @@
 #include "shell.h"
-int main(void)
+int main(int ac, char **av, char **env)
 {
 	char *line = NULL;
 	char **arg;
 	/*size_t bufsize = 0;*/
+	(void)ac;
+	(void)av;
+	(void)env;
 
 	while (1)
 	{
+		if (isatty(STDIN_FILENO))
+		write(STDOUT_FILENO, "$ ", 2);
 		/*prompt*/
 
 		/*printf("#cisfun$ ");*/
@@ -16,8 +21,8 @@ int main(void)
 		{
 			write(1, "\n", 1);
 			break;
-		}
-		*/
+		}*/
+	
 		line = read_line();
 
 		if (line[0] == '\0')
