@@ -28,7 +28,7 @@ int main(int ac, char **av, char **env)
 
 		/*check if command is exit*/
 
-		if (strcmp(line, "exit") == 0)
+		if (_strcmp(line, "exit") == 0)
 		{
 			free(line);
 			free(arg);

@@ -18,5 +18,6 @@ char *read_line(void);
 char **find_file_path(char **environ);
 extern char **environ;
 void free_commands(char **args);
+int _strcmp(char *s1, char *s2);
 
 #endif
