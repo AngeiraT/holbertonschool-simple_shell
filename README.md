@@ -35,12 +35,17 @@ The shell works like this in interactive mode:
 
 ```{bash}
 ($) ls -l
-total 72
--rw-rw-r-- 1 vagrant vagrant   343 July 12 01:02 built_in.c
--rw-rw-r-- 1 vagrant vagrant   850 July 12 01:02 error.c
--rw-rw-r-- 1 vagrant vagrant   555 July 12 14:27 execute_line.c
--rw-rw-r-- 1 vagrant vagrant   305 July 10 00:46 _getenv.c
--rwxrwxr-x 1 vagrant vagrant 14563 July 12 12:57 hsh
+total 56
+-rw-rw-r-- 1 vagrant vagrant   190 Jul 25 16:03 AUTHORS
+-rw-rw-r-- 1 vagrant vagrant  3697 Aug  3 02:27 README.md
+-rw-rw-r-- 1 vagrant vagrant   252 Aug  2 20:56 execute_line.c
+-rw-rw-r-- 1 vagrant vagrant  1430 Aug  3 01:47 help_functions.c
+-rwxrwxr-x 1 vagrant vagrant 17584 Aug  4 01:00 hsh
+-rw-rw-r-- 1 vagrant vagrant  2246 Jul 25 22:10 man_1_simple_shell
+-rw-rw-r-- 1 vagrant vagrant   187 Aug  2 20:49 read_line.c
+-rw-rw-r-- 1 vagrant vagrant   422 Aug  3 01:11 shell.h
+-rw-rw-r-- 1 vagrant vagrant   511 Aug  4 03:13 simple_shell.c
+-rw-rw-r-- 1 vagrant vagrant   360 Aug  2 20:51 split_line.c
 ($)
 ```
 ```{bash}
@@ -79,8 +84,7 @@ Command   |   Definition
 env | Prints the environment
 exit | Exits the shell
 ### Shell Flow Chart:
-
-![Image of Flowchart](https://i.imgur.com/WcN0ccr.jpg)
+![Screenshot from 2022-08-03 23-18-06](https://user-images.githubusercontent.com/105127608/182755893-187d23f9-053f-419a-ae86-3d2201f413aa.png)
 
 ## Built With
 
