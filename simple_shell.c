@@ -3,18 +3,27 @@ int main(void)
 {
 	char *line = NULL;
 	char **arg;
-	size_t bufsize = 0;
+	/*size_t bufsize = 0;*/
 
 	while (1)
 	{
 		/*prompt*/
-		printf("#cisfun$ ");
+
+		/*printf("#cisfun$ ");*/
 
 		/*receives user input and stores it in line*/
-		if (getline(&line, &bufsize, stdin) == -1)
+		/*if (getline(&line, &bufsize, stdin) == -1)
 		{
 			write(1, "\n", 1);
 			break;
+		}
+		*/
+		line = read_line();
+
+		if (line[0] == '\0')
+		{
+			free(line);
+			continue;
 		}
 
 		/* tokenizes line */
