@@ -1,4 +1,10 @@
 #include "shell.h"
+/**
+ *split_line - a functions that splits the command into tokens.
+ *@line:  string of commands
+ *Return: Void
+ */
+
 char **split_line(char *line)
 {
 	char **command;

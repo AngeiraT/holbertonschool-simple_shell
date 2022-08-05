@@ -1,4 +1,11 @@
 #include "shell.h"
+/**
+ *execute_line - Executes the validate command
+ *@arg: arguments receive in command line
+ *@env: enviroment
+ *Return: Void
+ */
+
 void execute_line(char **arg, char **env)
 {
 	int status;

@@ -1,4 +1,10 @@
 #include "shell.h"
+/**
+ *read_line - reads the line of the user input
+ *
+ *Return: Void
+ */
+
 char *read_line(void)
 {
         char *line = NULL;

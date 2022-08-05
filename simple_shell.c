@@ -1,4 +1,12 @@
 #include "shell.h"
+/**
+ *main - Program that creates a simple shell
+ *@ac: counts the number of arguments
+ *@av: is the arguments on the command line
+ *@env: the enviroment of variables
+ *Return: Void
+ */
+
 int main(int ac, char **av, char **env)
 {
 	char *line = NULL;
@@ -36,9 +44,7 @@ int main(int ac, char **av, char **env)
 			arg = NULL;
 			exit(0);
 		}
-/*	
-		find_file_path(env);
-*/
+
 		/* executes the validate command*/
 		if (arg[0] != NULL)
 			execute_line(arg, env);
