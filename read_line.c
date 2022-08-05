@@ -11,14 +11,13 @@ char *read_line(void)
 	size_t bufsize = 0;
 	ssize_t	get_l;
 
-        get_l = getline(&line, &bufsize, stdin);
+	get_l = getline(&line, &bufsize, stdin);
 
 	if (get_l == -1)
-	{	
+	{
 		free(line);
 		line = NULL;
 		exit(0);
 	}
-
-        return (line);
+        return(line);
 }

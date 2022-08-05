@@ -16,27 +16,18 @@ int main(int ac, char **av, char **env)
 
 	while (1)
 	{
-		/*prompt*/
-		if (isatty(STDIN_FILENO))
+		if (isatty(STDIN_FILENO))/*prompt*/
 			write(STDOUT_FILENO, "$ ", 2);
 
-		/*receives user input and stores it in line*/
-		line = read_line();
-
-		/*check if command is enter*/
-		if (*line == '\n')
+		line = read_line();/*receives user input and stores it in line*/
+		if (*line == '\n')/*check if command is enter*/
 		{
 			free(line);
 			line = NULL;
 			continue;
 		}
-
-		/* tokenizes line */
-		arg = split_line(line);
-		
-		/*check if command is exit*/
-
-		if (_strcmp(line, "exit") == 0)
+		arg = split_line(line);/* tokenizes line*/
+		if (_strcmp(line, "exit") == 0) /*check if command is exit*/
 		{
 			free(line);
 			line = NULL;
@@ -44,12 +35,9 @@ int main(int ac, char **av, char **env)
 			arg = NULL;
 			exit(0);
 		}
-
-		/* executes the validate command*/
-		if (arg[0] != NULL)
+		if (arg[0] != NULL)/*execute the command if is validated*/
 			execute_line(arg, env);
 
-		/*Frees memory for next command*/
 		free(line);
 		line = NULL;
 		free(arg);
