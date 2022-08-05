@@ -8,7 +8,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <sys/stat.h> 
+#include <sys/stat.h>
 #define TOK_DELIM " \t\r\n:"
 
 /* Prototypes */

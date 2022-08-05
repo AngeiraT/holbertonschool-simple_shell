@@ -14,7 +14,7 @@ char **split_line(char *line)
 	command = malloc(sizeof(char *) * 20);
 
 	token = strtok(line, TOK_DELIM);
-	 while (token != NULL)
+	while (token != NULL)
 	{
 		command[idx] = token;
 		idx++;

@@ -19,5 +19,5 @@ char *read_line(void)
 		line = NULL;
 		exit(0);
 	}
-	return(line);
+	return (line);
 }
